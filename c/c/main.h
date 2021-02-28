@@ -5,6 +5,7 @@
 #include <inttypes.h>
 #include <math.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 typedef unsigned char uch;
 typedef uint8_t u8;

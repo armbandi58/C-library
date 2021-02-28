@@ -13,5 +13,6 @@ list *list_pushforward(list *l0,u8 what);
 void list_print(list *l0);
 void list_free(list *l0);
 void list_length(list *l0,u16 *length);
+void list_find(list *l0,u8 mit);
 
 #endif //LIST_H_

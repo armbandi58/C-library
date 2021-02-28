@@ -59,3 +59,24 @@ void list_length(list *l0,u16 *length){
     }
     *length = db;
 }
+
+void list_find(list *l0,u8 mit){
+    list *p = l0;
+    u16 hely = 0;
+    bool flag = 0;
+    while(p != NULL){
+        hely++;
+        if(p->data_u8 == mit){
+            printf("Benne van a %d. helyen.\n",hely);
+            p = NULL;
+            flag = 1;
+            break;
+            //return;
+        }else{
+            p = p->next;
+        }
+    }
+    if(flag == 0){
+        printf("Nincs benne.\n");
+    }
+}
