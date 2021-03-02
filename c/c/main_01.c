@@ -26,8 +26,18 @@ int main(int argc, char *argv[])
         tmp2 += 1.1;
     }
     komplex_print(lk);
+    printf("==================\n");
 
+    tmp1 = 1.1;
+    tmp2 = 2.2;
+    for(u8 i = 0; i<10;i++){
+        lk = komplex_pushback(lk,tmp1,tmp2);
+        tmp1 -= 0.2;
+        tmp2 -= 0.5;
+    }
     //printf("Na mehet\n");
+    komplex_print(lk);
+    printf("================\n");
 
     list_print(l0);
     list_length(l0,&hossz);
