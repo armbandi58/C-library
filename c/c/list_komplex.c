@@ -9,6 +9,24 @@ komplex_list *komplex_pushforward(komplex_list *l0,float Re,float Im){
     return uj;
 }
 
+komplex_list *komplex_pushback(komplex_list *l0,float Re,float Im){
+    komplex_list *uj = (komplex_list*)malloc(sizeof(komplex_list));
+    uj -> data_Re = Re;
+    uj -> data_Im = Im;
+    uj -> next = NULL;
+
+    if(l0 == NULL){
+        return uj;
+    }else{
+        komplex_list *p = l0;
+        while(p->next != NULL){
+            p = p->next;
+        }
+        p->next = uj;
+        return l0;
+    }
+}
+
 void komplex_print(komplex_list *l0){
     komplex_list *p = l0;
     while(p != NULL){
