@@ -1,0 +1,4 @@
+cmd run 
+dotnet new console
+Ide mehet a progi
+dotnet run
